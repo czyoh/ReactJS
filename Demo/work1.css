@@ -1,0 +1,101 @@
+body {
+    color: #333;
+    font-family: "微软雅黑";
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+#root {
+    width: 500px;
+    overflow: hidden;
+    margin: 50px auto;
+    background-color: #f4f4f4;
+    border: 2px solid #E6E6E6;
+    border-radius: 5px;
+}
+.portrait {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    cursor: pointer;
+}
+.item-middle {
+    float: left;
+    margin-left: 20px;
+    height: 50px;
+    width: 300px;
+}
+.item-middle p {
+    margin-bottom: 5px;
+}
+.item-uname {
+    color: #359FFF;
+    cursor: pointer;
+}
+.btn {
+    background-color: #0AC940;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.item {
+    width: 450px;
+    height: 60px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #DDDDDD;
+}
+.CList {
+    width: 480px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.CList li {
+    padding: 0px 15px;
+}
+.fBox {
+    width: 480px;
+    margin: 20px auto;
+}
+.talkBox {
+    width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.fBox textarea {
+    width: 448px;
+    height: 80px;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px;
+    outline: none;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    resize: none;
+}
+.cBox {
+    width: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.cBox .title {
+    height: 60px;
+    width: 440px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 60px;
+    border-bottom: 2px solid #DDD;
+    margin-bottom: 30px;
+}
+.cBox-list {
+    overflow: hidden;
+}
