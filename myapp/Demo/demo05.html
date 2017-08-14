@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../build/react.js"></script>
+    <script type="text/javascript" src="../build/react-dom.js"></script>
+    <script type="text/javascript" src="../build/browser.min.js"></script>
+    <style>
+        .myBtn {
+            background-color: green;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // 这是一行注释 
+        var HelloMessage = React.createClass({
+            render: function() {
+                return <div>
+                <img src= { this.props.src } />
+                <h1>Hello world by { this.props.name }</h1>
+                <button className="myBtn">详情{ this.props.children }</button>
+                </div>
+            }
+        });
+        console.log(HelloMessage);
+        ReactDOM.render(
+            <div>
+                <HelloMessage name="张三" src="https://www.baidu.com/img/baidu_jgylogo3.gif"/>
+                <HelloMessage name="李四" children="11111"/>
+                <HelloMessage name="王二"/>
+            </div>,
+            document.getElementById("root")
+        );
+    </script>
+</body>
+</html>

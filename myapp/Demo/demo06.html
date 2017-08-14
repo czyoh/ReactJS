@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../build/react.js"></script>
+    <script type="text/javascript" src="../build/react-dom.js"></script>
+    <script type="text/javascript" src="../build/browser.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var HelloMessage = React.createClass({
+            render: function() {
+                return <div>
+                <img src= { this.props.src } />
+                <h1>Hello world by { this.props.name }</h1>
+                <button className="myBtn">详情{ this.props.children }</button>
+                </div>
+            }
+        });
+        var NotesList = React.createClass({
+            render: function() {
+                console.log(this.props.children);
+                return <ol>
+                    {
+                        React.Children.map(this.props.children, function(child) {
+                            return <li>{ child }</li>
+                        })
+                    }
+                </ol>
+            }
+        });
+        ReactDOM.render(
+            <div>
+                <NotesList children="1211">
+                    <HelloMessage name="张三" />
+                    <span>Hello</span>
+                    <span>World</span>
+                </NotesList>
+                <NotesList>
+                    <HelloMessage name="张三" />
+                    <span>张三</span>
+                    <span>我又回来了</span>
+                </NotesList>
+            </div>
+            ,document.getElementById("root")
+        );
+    </script>
+</body>
+</html>

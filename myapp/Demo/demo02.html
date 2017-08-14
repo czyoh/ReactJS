@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>循环实现多个元素</title>
+	<script type="text/javascript" src="../build/react.js"></script>
+	<script type="text/javascript" src="../build/react-dom.js"></script>
+	<script type="text/javascript" src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+	<script type="text/babel">
+		var names = ['麻子','李四','王二'];
+		ReactDOM.render(
+			<div>
+				{
+					names.map(function(name, index) {
+						return <div key = {index}> Hello, {name}!</div>
+					})
+				}
+			</div>,
+			document.getElementById('root')
+		);
+	</script>
+</body>
+</html>

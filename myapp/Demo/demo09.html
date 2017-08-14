@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../build/react.js"></script>
+    <script type="text/javascript" src="../build/react-dom.js"></script>
+    <script type="text/javascript" src="../build/browser.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var LikeButton = React.createClass({
+            getInitialState: function() {
+                return { dj: false }
+            },
+            doClick: function() {
+                this.setState({ dj: !this.state.dj });
+            },
+            render: function() {
+                var text = this.state.dj ? "点击领取屠龙宝刀" : "点击领取倚天神剑";
+                return (
+                    <p onClick={ this.doClick }>
+                        { text }
+                    </p>
+                )
+            }
+        });
+        ReactDOM.render(
+            <LikeButton />
+            ,document.getElementById("root")
+        );
+    </script>
+</body>
+</html>
